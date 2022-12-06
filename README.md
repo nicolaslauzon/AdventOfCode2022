@@ -1,9 +1,7 @@
 # AdventOfCode2022
-My solutions for Advent of Code 2022
-[Advent of Code 🎅](https://adventofcode.com/2022/)
+My solutions for [Advent of Code 🎅](https://adventofcode.com/2022/) 2022
 
-This small framework is a life saver.
-[Framework 😲](https://github.com/william-fecteau/AdventOfCodePythonFramework)
+This small [framework 😲](https://github.com/william-fecteau/AdventOfCodePythonFramework) is a life saver.
 
 Credits goes to [William Fecteau](https://github.com/william-fecteau)
 
