@@ -14,7 +14,11 @@ class Day7(AOCDay):
         print(root_dir.depth_search())
 
     def part2(self):
-        return 0
+        root_dir = self.parse_input()
+        # root_dir.print_tree()
+        print(root_dir.depth_search())
+        print(root_dir.size)
+        return root_dir.part2(999999999999999,30000000- (70000000-root_dir.size))
 
     def parse_input(self):
         root_dir = Dir('/', 0)
@@ -75,12 +79,9 @@ class Dir:
             ans += self.size
         return (self.size, ans)
     
-    def part2(self):
-        ans = 0
+    def part2(self, minimum, to_free):
         for i in self.getChilds():
-            s, a = i.depth_search()
-            self.size += s
-            ans += a
-        if self.size <= 100000:
-            ans += self.size
-        return (self.size, ans)
+            minimum = i.part2(minimum, to_free)
+        if self.size >= to_free and self.size < minimum:
+            minimum = self.size
+        return minimum
